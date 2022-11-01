@@ -26,10 +26,10 @@ jobs:
       - image:  circleci/node:12
     steps:
       - checkout
-      - run:
-          name: deploy to ec2
-          command: | 
-             scp ssh -i . ubuntu@13.234.35.138:/home/ubuntu/circleCi 
+      # - run:
+      #     name: deploy to ec2
+      #     command: | 
+      #        ssh ubuntu@13.234.35.138:/home/ubuntu/circleCi 
       - run:
           name: deploy to ec2
           command: | 
@@ -43,7 +43,7 @@ workflows:
       # - build_docker_image
       # - gke_create_cluster
       # - gke_deploy_app:
-      #     requires:
+            #     requires:
       #       - run_tests
       #       - build_docker_image
       #       - gke_create_cluster
