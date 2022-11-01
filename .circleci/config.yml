@@ -9,10 +9,10 @@ jobs:
           name: Install npm dependencies
           command: |
             npm install --save
-      - run:
-          name: Install npm dependencies
-          command: |
-            npm run build
+      # - run:
+      #     name: Install npm dependencies
+      #     command: |
+      #       npm run build
       # - run:
       #     name: Run Unit Tests
       #     command: |
