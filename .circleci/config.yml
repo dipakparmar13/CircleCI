@@ -28,8 +28,9 @@ jobs:
       - checkout
       - run:
           name: deploy to ec2
-          command: | 
-            rsync -zvhr -e ssh . ubuntu@13.234.35.138:/home/ubuntu
+          command: |
+             ssh -o "StrictHostKeyChecking no" user@hostname "cd ~/profile-store; git pull; npm install; forever start app.js"
+            # rsync -zvhr -e ssh . ubuntu@13.234.35.138:/home/ubuntu
       - run:
           name: deploy to ec2
           command: | 
