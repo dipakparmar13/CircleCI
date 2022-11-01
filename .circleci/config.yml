@@ -29,7 +29,6 @@ jobs:
       - run:
           name: deploy to ec2
           command: | 
-             ssh -o "StrictHostKeyChecking no"  ubuntu@13.234.35.138 "cd ~/home/ubuntu/circleCi; git pull; npm install; node app.js"
              rsync -zvhr -e ssh . ubuntu@13.234.35.138:/home/ubuntu/circleCi
       - run:
           name: deploy to ec2
